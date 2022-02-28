@@ -12,12 +12,10 @@ class MonitoringTestCase(unittest.TestCase):
         testObject = Monitoring()
         ergebnis = testObject.checkRAMUsage(unittest=True)
         self.assertLess(0, ergebnis)
-        self.assertEqual(ergebnis, psutil.virtual_memory()[2])
     def testCPUUsage(self):
         testObject = Monitoring()
         ergebnis = testObject.checkCPUUsage(unittest=True)
         self.assertLess(0, ergebnis)
-        self.assertEqual(ergebnis, psutil.cpu_percent(interval=None))
     def testDiskUsage(self):
         testObject = Monitoring()
         ergebnis = testObject.checkDiskUsage(unittest=True)
@@ -31,7 +29,6 @@ class MonitoringTestCase(unittest.TestCase):
     def testStartTime(self):
         testObject = Monitoring()
         ergebnis = testObject.checkStartTime(unittest=True)
-        self.assertLess(0, ergebnis)
         self.assertEqual(ergebnis, round(int(time.time() - psutil.boot_time())  / 100 / 60 / 60))
 
 if __name__ == "__main__":

@@ -22,4 +22,4 @@ jobs:
         pip install psutil
     - name: Testing with Unittest
       run: |
-        unittest
+        python Unittesting.py

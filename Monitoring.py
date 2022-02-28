@@ -313,7 +313,6 @@ class Monitoring():
         return args
 
 if __name__ == "__main__":
-    unittest.main()
     Monitoring.readConfig()
 
     change_settings = 0

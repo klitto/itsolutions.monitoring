@@ -331,6 +331,10 @@ if __name__ == "__main__":
         Monitoring.checkStartTime(test=True)
         Monitoring.checkUser()
 
+    '''
+    Edit Config if Args are given
+    '''
+
     if args.softlimit_ram_usage != None:
         change_settings += 1
         

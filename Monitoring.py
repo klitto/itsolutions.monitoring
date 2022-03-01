@@ -13,6 +13,10 @@ import time
 import argparse
 
 class Monitoring():
+    '''
+    Define Variables
+    '''
+
     softlimit_ram_usage = 0
     hardlimit_ram_usage = 0
 

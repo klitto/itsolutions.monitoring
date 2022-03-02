@@ -504,6 +504,10 @@ if __name__ == "__main__":
 
         Monitoring.readConfig()
 
+    '''
+    Starts the infinite loop
+    '''
+
     if change_settings == 0 and args.test == None:
         while True:
             if args.use_ram_usage == True:

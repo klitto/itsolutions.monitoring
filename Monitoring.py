@@ -1,9 +1,8 @@
-import Alarm as alarm
 from asyncio import sleep
-import configparser
-import os
+from Alarm import *
 from tracemalloc import start
 from xmlrpc.client import boolean
+import configparser
 import psutil
 import datetime
 import getpass
@@ -37,7 +36,6 @@ class Monitoring():
     mail_server = ""
     mail_to = ""
 
-
     '''
     Checks RAM Usage
     '''
@@ -65,6 +63,7 @@ class Monitoring():
                 message = "Information: System verwendet Arbeitsspeicher in %: " + str(ram_usage)
         
         Monitoring.writeLog(str(message))
+        alarm = Alarm()
         alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
 
     '''
@@ -94,6 +93,7 @@ class Monitoring():
                 message = "Information: System verwendet Plattenspeicher in %: " + str(disk_usage)
 
         Monitoring.writeLog(str(message))
+        alarm = Alarm()
         alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
     '''
     Checks Start Time
@@ -122,6 +122,7 @@ class Monitoring():
                 message = "Information: Systemlaufzeit in Stunden: " + str(start_time)
         
         Monitoring.writeLog(str(message))
+        alarm = Alarm()
         alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
 
     '''
@@ -151,6 +152,7 @@ class Monitoring():
                 message = "Information: Anzahl der laufenden Prozesse: " + str(processes)
 
         Monitoring.writeLog(str(message))
+        alarm = Alarm()
         alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
 
     '''
@@ -180,6 +182,7 @@ class Monitoring():
                 message = "Information: System verwendent CPU in %: " + str(cpu_usage)
 
         Monitoring.writeLog(str(message))
+        alarm = Alarm()
         alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
 
 

@@ -3,9 +3,8 @@ from email.message import EmailMessage
 
 class Alarm():
 
-    def sendAlarmMail(mail_login, mail_to, mail_password, mail_server, subject, message):
+    def sendAlarmMail(self_parameter=0, mail_login="", mail_to="", mail_password="", mail_server="", subject="", message=""):
         msg = EmailMessage()
-
         msg["Subject"] = subject
         msg["From"] =  mail_login
         msg["To"] = mail_to

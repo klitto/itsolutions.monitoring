@@ -8,7 +8,7 @@ logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO, stre
 
 class MonitoringTestCase(unittest.TestCase):
        
-    def testRAMUsag(self):
+    def testRAMUsage(self):
         testObject = Monitoring()
         ergebnis = testObject.checkRAMUsage(unittest=True)
         self.assertLess(0, ergebnis)

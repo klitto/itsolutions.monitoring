@@ -56,15 +56,17 @@ class Monitoring():
                 message = "TEST: Warnung: System verwendet Arbeitsspeicher in %: " + str(ram_usage)
             else:
                 message = "Warnung: System verwendet Arbeitsspeicher in %: " + str(ram_usage)
+            
+            Monitoring.writeLog(str(message))
+            alarm = Alarm()
+            alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
         elif ram_usage >= softlimit_ram_usage:
             if test == True:
                 message = "TEST: Information: System verwendet Arbeitsspeicher in %: " + str(ram_usage)
             else:
                 message = "Information: System verwendet Arbeitsspeicher in %: " + str(ram_usage)
         
-        Monitoring.writeLog(str(message))
-        alarm = Alarm()
-        alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
+            Monitoring.writeLog(str(message))
 
     '''
     Checks Disk Usage
@@ -86,15 +88,18 @@ class Monitoring():
                 message = "TEST: Warnung: System verwendet Plattenspeicher in %: " + str(disk_usage)
             else:
                 message = "Warnung: System verwendet Plattenspeicher in %: " + str(disk_usage)
+            
+            Monitoring.writeLog(str(message))
+            alarm = Alarm()
+            alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
         elif disk_usage >= softlimit_disk_usage:
             if test == True:
                 message = "TEST: Information: System verwendet Plattenspeicher in %: " + str(disk_usage)
             else:
                 message = "Information: System verwendet Plattenspeicher in %: " + str(disk_usage)
 
-        Monitoring.writeLog(str(message))
-        alarm = Alarm()
-        alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
+            Monitoring.writeLog(str(message))
+    
     '''
     Checks Start Time
     '''
@@ -115,16 +120,18 @@ class Monitoring():
                 message = "TEST: Warnung: Systemlaufzeit in Stunden: " + str(start_time)
             else:
                 message = "Warnung: Systemlaufzeit in Stunden: " + str(start_time)
+            
+            Monitoring.writeLog(str(message))
+            alarm = Alarm()
+            alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
         elif start_time >= softlimit_start_time:
             if test == True:
                 message = "TEST: Information: Systemlaufzeit in Stunden: " + str(start_time)
             else:
                 message = "Information: Systemlaufzeit in Stunden: " + str(start_time)
         
-        Monitoring.writeLog(str(message))
-        alarm = Alarm()
-        alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
-
+            Monitoring.writeLog(str(message))
+        
     '''
     Checks Process-Count
     '''
@@ -145,15 +152,17 @@ class Monitoring():
                 message = "TEST: Warnung: Anzahl der laufenden Prozesse: " + str(processes)
             else:
                 message = "Warnung: Anzahl der laufenden Prozesse: " + str(processes)
+            
+            Monitoring.writeLog(str(message))
+            alarm = Alarm()
+            alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
         elif processes >= softlimit_processes:
             if test == True:
                 message = "TEST: Information: Anzahl der laufenden Prozesse: " + str(processes)
             else:
                 message = "Information: Anzahl der laufenden Prozesse: " + str(processes)
 
-        Monitoring.writeLog(str(message))
-        alarm = Alarm()
-        alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
+            Monitoring.writeLog(str(message))
 
     '''
     Checks CPU Usage
@@ -175,15 +184,17 @@ class Monitoring():
                 message = "TEST: Warnung: System verwendent CPU in %: " + str(cpu_usage)
             else:
                 message = "Warnung: System verwendent CPU in %: " + str(cpu_usage)
+
+            Monitoring.writeLog(str(message))
+            alarm = Alarm()
+            alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
         elif cpu_usage >= softlimit_cpu_usage:
             if test == True:
                 message = "TEST: Information: System verwendent CPU in %: " + str(cpu_usage)
             else:
                 message = "Information: System verwendent CPU in %: " + str(cpu_usage)
 
-        Monitoring.writeLog(str(message))
-        alarm = Alarm()
-        alarm.sendAlarmMail(mail_login, mail_to, mail_password, mail_server, message, message)
+            Monitoring.writeLog(str(message))
 
 
     '''

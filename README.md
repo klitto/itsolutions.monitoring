@@ -1,2 +1,1 @@
-# hallo
-Lernfeld 8 | Daten systemübergreifend bereitstellen
+Dieses Projekt ist Teil eines Schulprojekts!

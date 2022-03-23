@@ -304,6 +304,10 @@ class Monitoring():
             mail_server = config.get("mail", "mail_server")
             mail_to = config.get("mail", "mail_to")
 
+    '''
+    Definiert Argumente aus der Konsoleneingabe
+    '''
+
     def readArguments():
         parser = argparse.ArgumentParser(description="Client Monitoring")
         parser.add_argument('-t', '--test', type=bool, metavar='', required=False, help='Führe einen Test mit fiktiven Werten durch')

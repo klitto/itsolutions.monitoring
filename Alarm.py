@@ -3,6 +3,10 @@ from email.message import EmailMessage
 
 class Alarm():
 
+    '''
+    Diese Funktion ist für den Mailversand zuständig
+    '''
+
     def sendAlarmMail(self_parameter=0, mail_login="", mail_to="", mail_password="", mail_server="", subject="", message=""):
         msg = EmailMessage()
         msg["Subject"] = subject

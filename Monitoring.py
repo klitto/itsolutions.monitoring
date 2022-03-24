@@ -277,7 +277,7 @@ class Monitoring():
             print("Es ist ein Fehler beim Aufruf der Konfiguration aufgetreten!")
 
             file = open(file_path, "w")
-            file.write("[tests]\n\nsoftlimit_ram_usage = 75\nhardlimit_ram_usage = 90\nsoftlimit_disk_usage = 75\nhardlimit_disk_usage = 90\nsoftlimit_start_time = 24\nhardlimit_start_time = 48\nsoftlimit_processes = 200\nhardlimit_processes = 250\nsoftlimit_cpu_usage = 75\nhardlimit_cpu_usage = 90\n\n[mail]\nmail_login = user\nmail_password = password\nmail_server = server\nmail_to = reciever")
+            file.write("[tests]\nsoftlimit_ram_usage = 75\nhardlimit_ram_usage = 90\nsoftlimit_disk_usage = 75\nhardlimit_disk_usage = 90\nsoftlimit_start_time = 24\nhardlimit_start_time = 48\nsoftlimit_processes = 200\nhardlimit_processes = 250\nsoftlimit_cpu_usage = 75\nhardlimit_cpu_usage = 90\n\n[mail]\nmail_login = user\nmail_password = password\nmail_server = server\nmail_to = reciever")
             file.close()
 
             config = configparser.ConfigParser()

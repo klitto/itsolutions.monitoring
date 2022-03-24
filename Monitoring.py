@@ -224,7 +224,7 @@ class Monitoring():
         print(date + " | " + socket.gethostname() + " | " + message + "\n")
 
     '''
-    Creates and Reads INI Config if not exists
+    Creates and reads INI config if not exists
     '''
 
     def readConfig():
@@ -249,7 +249,6 @@ class Monitoring():
         global mail_password
         global mail_server
         global mail_to
-
 
         try:
             config = configparser.ConfigParser()
@@ -305,7 +304,7 @@ class Monitoring():
             mail_to = config.get("mail", "mail_to")
 
     '''
-    Definiert Argumente aus der Konsoleneingabe
+    This function defines arguments when opening via console
     '''
 
     def readArguments():
@@ -350,7 +349,7 @@ if __name__ == "__main__":
         Monitoring.checkUser()
 
     '''
-    Edit Config if Args are given
+    Edit config if args are given
     '''
 
     if args.softlimit_ram_usage != None:

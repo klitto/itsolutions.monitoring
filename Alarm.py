@@ -4,7 +4,7 @@ from email.message import EmailMessage
 class Alarm():
 
     '''
-    Diese Funktion ist für den Mailversand zuständig
+    This function is responsible for sending emails
     '''
 
     def sendAlarmMail(self_parameter=0, mail_login="", mail_to="", mail_password="", mail_server="", subject="", message=""):

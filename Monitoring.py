@@ -313,8 +313,8 @@ class Monitoring():
         parser.add_argument('-sram', '--softlimit_ram_usage', type=int, required=False, help='Ändere das Softlimit für die RAM Auslastung')
         parser.add_argument('-hram', '--hardlimit_ram_usage', type=int, required=False, help='Ändere das Hardlimit für die RAM Auslastung')
         parser.add_argument('-uram', '--use_ram_usage', type=bool, required=False, help='Überwache die RAM Auslastung')
-        parser.add_argument('-sdu', '--hardlimit_disk_usage', type=int, required=False, help='Ändere das Softlimit für die Disk Auslastung')
-        parser.add_argument('-hdu', '--softlimit_disk_usage', type=int, required=False, help='Ändere das Hardlimit für die Disk Auslastung')
+        parser.add_argument('-sdu', '--softlimit_disk_usage', type=int, required=False, help='Ändere das Softlimit für die Disk Auslastung')
+        parser.add_argument('-hdu', '--hardlimit_disk_usage', type=int, required=False, help='Ändere das Hardlimit für die Disk Auslastung')
         parser.add_argument('-udu', '--use_disk_usage', type=bool, required=False, help='Überwache die Disk Auslastung')
         parser.add_argument('-sst', '--softlimit_start_time', type=int, required=False, help='Ändere das Softlimit für die Start Time')
         parser.add_argument('-hst', '--hardlimit_start_time', type=int, required=False, help='Ändere das Hardlimit für die Start Time')
@@ -357,7 +357,7 @@ if __name__ == "__main__":
         
         file_path = "config.ini"
         
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(args.softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(args.softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
         
         file = open(file_path, "w+")
         file.write(config_input)
@@ -369,7 +369,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(args.hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(args.hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
         
         file = open(file_path, "w+")
         file.write(config_input)
@@ -381,7 +381,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(args.softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(args.softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
         
         file = open(file_path, "w+")
         file.write(config_input)
@@ -393,7 +393,7 @@ if __name__ == "__main__":
 
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(args.hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(args.hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
         
         file = open(file_path, "w+")
         file.write(config_input)
@@ -405,7 +405,7 @@ if __name__ == "__main__":
 
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(args.softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(args.softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
         
         file = open(file_path, "w+")
         file.write(config_input)
@@ -417,7 +417,7 @@ if __name__ == "__main__":
         
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(args.hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(args.hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -429,7 +429,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(args.softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(args.softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -441,7 +441,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(args.hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(args.hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -453,7 +453,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(args.softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(args.softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -465,7 +465,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(args.hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(args.hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -477,7 +477,7 @@ if __name__ == "__main__":
 
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(args.mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(args.mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -489,7 +489,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(args.mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(args.mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -501,7 +501,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(args.mail_server) + "\nmail_to = " + str(mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(args.mail_server) + "\nmail_to = " + str(mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)
@@ -513,7 +513,7 @@ if __name__ == "__main__":
             
         file_path = "config.ini"
 
-        config_input = "[tests]\n\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(args.mail_to) + ""
+        config_input = "[tests]\nsoftlimit_ram_usage = " + str(softlimit_ram_usage) + "\nhardlimit_ram_usage = " + str(hardlimit_ram_usage) + "\nsoftlimit_disk_usage = " + str(softlimit_disk_usage) + "\nhardlimit_disk_usage = " + str(hardlimit_disk_usage) + "\nsoftlimit_start_time = " + str(softlimit_start_time) + "\nhardlimit_start_time = " + str(hardlimit_start_time) + "\nsoftlimit_processes = " + str(softlimit_processes) + "\nhardlimit_processes = " + str(hardlimit_processes) + "\nsoftlimit_cpu_usage = " + str(softlimit_cpu_usage) + "\nhardlimit_cpu_usage = " + str(hardlimit_cpu_usage) + "\n\n[mail]\nmail_login = " + str(mail_login) + "\nmail_password = " + str(mail_password) + "\nmail_server = " + str(mail_server) + "\nmail_to = " + str(args.mail_to) + ""
 
         file = open(file_path, "w+")
         file.write(config_input)

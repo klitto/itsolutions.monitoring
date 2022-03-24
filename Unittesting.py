@@ -15,29 +15,29 @@ class MonitoringTestCase(unittest.TestCase):
         testObject = Monitoring()
         ergebnis = testObject.checkRAMUsage(unittest=True)
         self.assertLess(0, ergebnis)
-        print("Gemessener RAM-Testwert: " + ergebnis)
+        print("Gemessener RAM-Testwert: " + str(ergebnis))
     def testCPUUsage(self):
         testObject = Monitoring()
         ergebnis = testObject.checkCPUUsage(unittest=True)
         self.assertLess(0, ergebnis)
-        print("Gemessener CPU-Testwert: " + ergebnis)
+        print("Gemessener CPU-Testwert: " + str(ergebnis))
     def testDiskUsage(self):
         testObject = Monitoring()
         ergebnis = testObject.checkDiskUsage(unittest=True)
         self.assertGreater(101, ergebnis)
         self.assertEqual(ergebnis, psutil.disk_usage("/")[3])
-        print("Gemessener Disk-Usage-Testwert: " + ergebnis)
+        print("Gemessener Disk-Usage-Testwert: " + str(ergebnis))
     def testProcesses(self):
         testObject = Monitoring()
         ergebnis = testObject.checkProcesses(unittest=True)
         self.assertLess(0, ergebnis)
         self.assertEqual(ergebnis, len(psutil.pids()))
-        print("Gemessener Prozess-Testwert: " + ergebnis)
+        print("Gemessener Prozess-Testwert: " + str(ergebnis))
     def testStartTime(self):
         testObject = Monitoring()
         ergebnis = testObject.checkStartTime(unittest=True)
         self.assertEqual(ergebnis, round(int(time.time() - psutil.boot_time())  / 100 / 60 / 60))
-        print("Gemessener Starttime-Testwert: " + ergebnis)
+        print("Gemessener Starttime-Testwert: " + str(ergebnis))
 
 if __name__ == "__main__":
     unittest.main()

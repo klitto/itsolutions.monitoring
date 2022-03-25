@@ -13,7 +13,7 @@ import argparse
 
 class Monitoring():
     '''
-    Define Variables abc
+    Define Variables
     '''
 
     softlimit_ram_usage = 0
